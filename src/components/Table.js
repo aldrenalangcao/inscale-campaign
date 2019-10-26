@@ -1,5 +1,6 @@
 import React from 'react';
-import DataTable from 'react-data-table-component';
+import MUIDataTable from "mui-datatables";
+
 import Active from './Active';
 import Budget from './Budget';
 import moment from 'moment';
@@ -20,38 +21,58 @@ const data = [
 const Table = () => {
     const columns = [
         {
-            name: 'Name',
-            sortable: true,
-            selector: 'name',
+            name: 'name',
+            label: 'Name',
         },
         {
-            name: 'Start Date',
-            sortable: true,
-            selector: 'startDate',
+            name: 'startDate',
+            label: 'Start Date',
+            options: {
+                searchable: false,
+            },
         },
         {
-            name: 'End Date',
-            sortable: true,
-            selector: 'endDate',
+            name: 'endDate',
+            label: 'End Date',
+            options: {
+                searchable: false,
+            },
         },
         {
-            name: 'Active',
-            sortable: true,
-            cell: row => <Active isActive={moment().isBetween(row.startDate, row.endDate)} />,
+            name: 'startDate',
+            label: 'Active',
+            options: {
+                customBodyRender: (value, { rowData }) => {
+                    return <Active isActive={moment().isBetween(rowData[1], rowData[2])} />;
+                }
+            },
         },
         {
             name: 'Budget',
-            sortable: true,
-            cell: row => <Budget amount={row.Budget} />,
+            label: 'Budget',
+            options: {
+                customBodyRender: (value) => {
+                    return <Budget amount={value} />;
+                },
+                searchable: false,
+            },
         },
     ]
 
+    const options = {
+        print: false,
+        download: false,
+        filter: false,
+        selectableRows: 'none',
+    }
+
     return (
         <div>
-            <DataTable
+            <MUIDataTable
                 title="Campaign"
                 columns={columns}
                 data={data}
+                options={options}
             />
         </div>
     )
