@@ -36,6 +36,7 @@ const Campaign = () => {
   const datePickers = (
     <div>
       <DatePicker
+        className="datepicker"
         maxDate={endDate || moment('12/31/2100')}
         value={startDate}
         placeholder={'Start Date'}
@@ -45,6 +46,7 @@ const Campaign = () => {
         clearable={true}
       />
       <DatePicker
+        className="datepicker"
         minDate={startDate || moment('1/1/1970')}
         value={endDate}
         placeholder={'End Date'}
@@ -58,6 +60,7 @@ const Campaign = () => {
 
   return (
     <div>
+      <h1> Campaigns </h1>
       <Table data={filter(campaigns)} title={datePickers} />
     </div>
   );
