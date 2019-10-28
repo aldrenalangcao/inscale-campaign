@@ -4,12 +4,12 @@
   border-radius: 50%;
   display: table-cell;
   vertical-align: middle;
-}
-.is-active-dot.inactive {
-  background-color: red;
-}
-.is-active-dot.active {
-  background-color: green;
+  &.inactive {
+    background-color: red;
+  }
+  &.active {
+    background-color: green;
+  }
 }
 .is-active-text {
   padding-left: 5px;

@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import rootReducer from './reducers';
 import { addCampaign } from './actions/campaignActions';
 
-import './index.css';
+import './index.scss';
 import App from './App';
 
 const store = createStore(rootReducer);
