@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { TextField } from '@material-ui/core';
 import { DatePicker } from '@material-ui/pickers';
 import moment from 'moment';
 
@@ -9,8 +10,9 @@ const Campaign = () => {
   const [filters, updateFilters] = useState({
     startDate: null,
     endDate: null,
+    searchTerm: '',
   });
-  const { startDate, endDate } = filters;
+  const { startDate, endDate, searchTerm } = filters;
   const campaigns = useSelector(state => state.campaigns);
 
   const updateFilter = field => value => {
@@ -29,6 +31,10 @@ const Campaign = () => {
     if (endDate)
       data = data.filter(campaign =>
         moment(campaign.endDate).isSameOrBefore(endDate)
+      );
+    if (searchTerm)
+      data = data.filter(
+        ({ name }) => name.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
       );
     return data;
   };
@@ -54,6 +60,14 @@ const Campaign = () => {
         onChange={updateFilter('endDate')}
         format={'M/D/YYYY'}
         clearable={true}
+      />
+      <TextField
+        style={{ float: 'right' }}
+        label={'Search'}
+        value={searchTerm}
+        onChange={event =>
+          updateFilters({ ...filters, searchTerm: event.target.value })
+        }
       />
     </div>
   );

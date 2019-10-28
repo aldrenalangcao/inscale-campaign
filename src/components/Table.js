@@ -6,7 +6,7 @@ import moment from 'moment';
 import Active from './Active';
 import Budget from './Budget';
 
-const Table = ({ data, title, ...props }) => {
+const Table = ({ data, title, customToolbar, ...props }) => {
   const columns = [
     {
       name: 'name',
@@ -53,8 +53,11 @@ const Table = ({ data, title, ...props }) => {
     print: false,
     download: false,
     filter: false,
+    search: false,
     viewColumns: false,
     selectableRows: 'none',
+    pagination: false,
+    customToolbar,
   };
 
   return (
