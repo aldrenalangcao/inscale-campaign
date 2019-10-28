@@ -1,5 +1,7 @@
 import React from 'react';
 import MUIDataTable from "mui-datatables";
+import { DatePicker } from "@material-ui/pickers";
+
 
 import Active from './Active';
 import Budget from './Budget';
@@ -18,7 +20,7 @@ const data = [
     { "id": 10, "name": "Realbridge", "startDate": "3/5/2018", "endDate": "10/2/2017", "Budget": 505602 }
 ]
 
-const Table = () => {
+const Campaign = () => {
     const columns = [
         {
             name: 'name',
@@ -63,13 +65,21 @@ const Table = () => {
         print: false,
         download: false,
         filter: false,
+        viewColumns: false,
         selectableRows: 'none',
     }
+
+    const datePickers = (
+        <div>
+            <DatePicker value={null} placeholder={"Start Date"} onChange={()=>{}} format={'D/M/YYYY'}/>
+            <DatePicker value={null} placeholder={"End Date"} onChange={() => { }} format={'D/M/YYYY'} />
+        </div>
+    )
 
     return (
         <div>
             <MUIDataTable
-                title="Campaign"
+                title={datePickers}
                 columns={columns}
                 data={data}
                 options={options}
@@ -78,4 +88,4 @@ const Table = () => {
     )
 }
 
-export default Table;
+export default Campaign;
