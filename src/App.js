@@ -3,8 +3,7 @@ import { Container } from '@material-ui/core';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import MomentUtils from '@date-io/moment';
 
-import Campaign from './components/Campaign';
-
+import Campaign from './containers/Campaign';
 
 function App() {
   return (
