@@ -1,14 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+# Campaigns
 ## Demo page
 
 Project is deployed using Github Pages here: https://aldrenalangcao.github.io/inscale-campaign/
 
 ## Commands Available
 
-You can open the console and run 
+A global method `AddCampaigns` is available through the console for you to add campaigns. 
 
-## Available Scripts
+I have added 3 campaigns by default.
+
+### Example:
+```
+// Input this command on your browser's console
+AddCampaigns([
+  {
+    id: 1,
+    name: 'Divavu',
+    startDate: '10/25/2019',
+    endDate: '10/30/2019',
+    Budget: 8837700,
+  },
+  {
+    id: 2,
+    name: 'Jaxspan',
+    startDate: '10/24/2019',
+    endDate: '10/29/2019',
+    Budget: 608715,
+  },
+  {
+    id: 3,
+    name: 'Miboo',
+    startDate: '11/1/2017',
+    endDate: '6/20/2020',
+    Budget: 239507,
+  },
+])
+```
+#
+#
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# Available Scripts
 
 In the project directory, you can run:
 
