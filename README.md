@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Project is deployed using Github Pages here: https://aldrenalangcao.github.io/inscale-campaign/
 
+## Commands Available
+
+You can open the console and run 
+
 ## Available Scripts
 
 In the project directory, you can run:
