@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/inscale-campaign/precache-manifest.2dbf396ac492e391680777c77568ea7d.js"
+  "/inscale-campaign/precache-manifest.2b879f5fbbfae1e43821c3bd9f85c0ea.js"
 );
 
 self.addEventListener('message', (event) => {

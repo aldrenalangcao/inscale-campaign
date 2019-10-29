@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/inscale-campaign/static/css/main.97804818.chunk.css",
-    "main.js": "/inscale-campaign/static/js/main.460b836e.chunk.js",
-    "main.js.map": "/inscale-campaign/static/js/main.460b836e.chunk.js.map",
+    "main.js": "/inscale-campaign/static/js/main.78e4d4bd.chunk.js",
+    "main.js.map": "/inscale-campaign/static/js/main.78e4d4bd.chunk.js.map",
     "runtime-main.js": "/inscale-campaign/static/js/runtime-main.0e85b8f2.js",
     "runtime-main.js.map": "/inscale-campaign/static/js/runtime-main.0e85b8f2.js.map",
     "static/js/2.671b72b4.chunk.js": "/inscale-campaign/static/js/2.671b72b4.chunk.js",
     "static/js/2.671b72b4.chunk.js.map": "/inscale-campaign/static/js/2.671b72b4.chunk.js.map",
     "index.html": "/inscale-campaign/index.html",
-    "precache-manifest.2dbf396ac492e391680777c77568ea7d.js": "/inscale-campaign/precache-manifest.2dbf396ac492e391680777c77568ea7d.js",
+    "precache-manifest.2b879f5fbbfae1e43821c3bd9f85c0ea.js": "/inscale-campaign/precache-manifest.2b879f5fbbfae1e43821c3bd9f85c0ea.js",
     "service-worker.js": "/inscale-campaign/service-worker.js",
     "static/css/main.97804818.chunk.css.map": "/inscale-campaign/static/css/main.97804818.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.0e85b8f2.js",
     "static/js/2.671b72b4.chunk.js",
     "static/css/main.97804818.chunk.css",
-    "static/js/main.460b836e.chunk.js"
+    "static/js/main.78e4d4bd.chunk.js"
   ]
 }
