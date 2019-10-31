@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import MUIDataTable from 'mui-datatables';
 import moment from 'moment';
 
-import Active from './Active';
-import Budget from './Budget';
+import Active from '../Active';
+import Budget from '../Budget';
 
 const Table = ({ data, title, customToolbar, ...props }) => {
   const isActive = (startDate, endDate) => {
     const today = moment().startOf('day');
     return today.isSameOrAfter(startDate) && today.isSameOrBefore(endDate);
-  }
+  };
 
   const columns = [
     {
@@ -36,9 +36,7 @@ const Table = ({ data, title, customToolbar, ...props }) => {
       label: 'Active',
       options: {
         customBodyRender: (value, { rowData }) => {
-          return (
-            <Active isActive={isActive(rowData[1], rowData[2])} />
-          );
+          return <Active isActive={isActive(rowData[1], rowData[2])} />;
         },
       },
     },

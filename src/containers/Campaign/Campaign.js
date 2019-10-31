@@ -4,7 +4,7 @@ import { TextField } from '@material-ui/core';
 import { DatePicker } from '@material-ui/pickers';
 import moment from 'moment';
 
-import Table from '../components/Table';
+import Table from '../../components/Table';
 
 const Campaign = () => {
   const [filters, updateFilters] = useState({
