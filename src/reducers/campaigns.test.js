@@ -1,18 +1,5 @@
-import { ADD_CAMPAIGN, addCampaign } from '../actions/campaignActions';
-import campaignsInitialState from './campaignsInitialState';
-
-const campaigns = (state = campaignsInitialState, action) => {
-  switch (action.type) {
-    case ADD_CAMPAIGN:
-      const newState = [...state].concat(action.data);
-      return newState;
-
-    default:
-      return state;
-  }
-};
-
-export default campaigns;
+import { addCampaign } from '../actions/campaignActions';
+import campaigns from './campaigns';
 
 it('should properly update the state when action type is ADD_CAMPAIGN', () => {
   const campaign = {

@@ -19,4 +19,3 @@ ReactDOM.render(
 
 //Add adding of campaign to global document object
 window.AddCampaigns = campaign => store.dispatch(addCampaign(campaign));
-window.store = store;

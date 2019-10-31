@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Active = ({ isActive }) => {
-  const activeClass = isActive ? 'active' : 'inactive';
+  const activeColor = isActive ? 'active' : 'inactive';
   const activeText = isActive ? 'Active' : 'Inactive';
   return (
     <div className="cell-active">
-      <span className={`is-active-dot ${activeClass}`} />{' '}
-      <span className="is-active-text"> {activeText} </span>
+      <span className={`is-active-dot ${activeColor}`} />{' '}
+      <span className="is-active-text">{activeText}</span>
     </div>
   );
 };
