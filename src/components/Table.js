@@ -7,6 +7,11 @@ import Active from './Active';
 import Budget from './Budget';
 
 const Table = ({ data, title, customToolbar, ...props }) => {
+  const isActive = (startDate, endDate) => {
+    const today = moment().startOf('day');
+    return today.isSameOrAfter(startDate) && today.isSameOrBefore(endDate);
+  }
+
   const columns = [
     {
       name: 'name',
@@ -32,7 +37,7 @@ const Table = ({ data, title, customToolbar, ...props }) => {
       options: {
         customBodyRender: (value, { rowData }) => {
           return (
-            <Active isActive={moment().isBetween(rowData[1], rowData[2])} />
+            <Active isActive={isActive(rowData[1], rowData[2])} />
           );
         },
       },
