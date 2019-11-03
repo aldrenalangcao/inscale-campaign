@@ -6,11 +6,9 @@ import moment from 'moment';
 import Active from '../Active';
 import Budget from '../Budget';
 
+import isActive from '../../utils/isActive';
+
 const Table = ({ data, title, customToolbar, ...props }) => {
-  const isActive = (startDate, endDate) => {
-    const today = moment().startOf('day');
-    return today.isSameOrAfter(startDate) && today.isSameOrBefore(endDate);
-  };
 
   const columns = [
     {
