@@ -10,7 +10,7 @@
     "@material-ui/pickers": "^3.2.7",
     "moment": "^2.24.0",
     "mui-datatables": "^2.12.4",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "numeral": "^2.0.6",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
